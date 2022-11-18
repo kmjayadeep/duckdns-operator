@@ -3,3 +3,8 @@
 .github
 .gitignore
 README.md
+
+# docker
+
+.dockerignore
+Dockerfile
