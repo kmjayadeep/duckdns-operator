@@ -82,7 +82,6 @@ func (a *IngressDnsController) Reconcile(ctx context.Context, req reconcile.Requ
 
 		ip := getIp(ing)
 		url := fmt.Sprintf("https://www.duckdns.org/update?domains=%s&token=%s&ip=%s&verbose=true", prefix, DUCKDNS_TOKEN, ip)
-		logf.Log.Info(url)
 		r, err := http.Get(url)
 		if err != nil {
 			logf.Log.Error(err, "unable to update domain", "host", host)
